@@ -38,6 +38,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
   padding: 2rem;
   gap: 4rem;
@@ -45,28 +46,72 @@ h2 {
 
 .headerPanel {
   text-align: center;
+  max-width: 650px;
 }
 
 .gridPanel {
   display: grid;
   gap: 2rem;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    'cyanCard'
+    'redCard'
+    'orangeCard'
+    'blueCard';
 }
 
 .card {
-  border: 1px solid red;
   border-radius: 5px;
   padding: 1.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-  p {
-    color: var(--color-grey-400);
+.card p {
+  color: var(--color-grey-400);
+}
+
+.card img {
+  margin-left: auto;
+  display: block;
+  margin-top: 2rem;
+}
+
+.card h3 {
+  font-weight: var(--font-weight-600);
+}
+
+.cyan {
+  border-top: 3px solid var(--color-cyan);
+  grid-area: cyanCard;
+}
+
+.red {
+  border-top: 3px solid var(--color-red);
+  grid-area: redCard;
+}
+
+.orange {
+  border-top: 3px solid var(--color-orange);
+  grid-area: orangeCard;
+}
+
+.blue {
+  border-top: 3px solid var(--color-blue);
+  grid-area: blueCard;
+}
+
+@media (min-width: 50rem) {
+  .content {
+    /* margin: 0 10rem; */
   }
 
-  img {
-    margin-left: auto;
-    display: block;
-  }
-
-  h3 {
-    font-weight: var(--font-weight-600);
+  .gridPanel {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      '.         redCard           .'
+      'cyanCard  redCard    blueCard'
+      'cyanCard  orangeCard blueCard'
+      '.         orangeCard        .';
   }
 }
