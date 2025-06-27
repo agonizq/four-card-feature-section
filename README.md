@@ -31,5 +31,5 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL](https://github.com/agonizq/product-preview-card-component/)
-- Live Site URL: [live site URL](https://agonizq.github.io/product-preview-card-component/)
+- Solution URL: [solution URL](https://github.com/agonizq/four-card-feature-section)
+- Live Site URL: [live site URL](https://agonizq.github.io/four-card-feature-section)
